@@ -1,4 +1,4 @@
-# The MIT License (MIT)
+#The MIT License (MIT)
 #
 # Copyright (c) 2013 Fukuta, Shinya.
 #
@@ -21,11 +21,21 @@
 
 LOCAL_PATH := $(call my-dir)
 
+MYINCLUDES := ../include . /opt/android-ndk/platforms/android-8/arch-arm/usr/include
 include $(CLEAR_VARS)
 
 LOCAL_CPP_EXTENSION := .cc
-LOCAL_MODULE := libgtest
-LOCAL_C_INCLUDES := include .
-LOCAL_SRC_FILES := ../src/gtest-all.cc
+LOCAL_MODULE := gtest
+LOCAL_C_INCLUDES := $(MYINCLUDES)
+LOCAL_SRC_FILES := "../src/gtest-all.cc"
 
 include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE	:= gtest_main
+LOCAL_C_INCLUDES:= $(MYINCLUDES)
+LOCAL_SRC_FILES	:= "../src/gtest_main.cc ../src/gtest-all.cc"
+
+include $(BUILD_STATIC_LIBRARY)
+
