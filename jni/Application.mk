@@ -1,4 +1,4 @@
-# The MIT License (MIT)
+#The MIT License (MIT)
 #
 # Copyright (c) 2013 Fukuta, Shinya.
 #
@@ -19,5 +19,8 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-APP_MODULES := libgtest
+APP_MODULES := gtest gtest_main
+APP_ABI	:= armeabi-v7a
+APP_ARM_MODE := arm
 APP_STL := gnustl_static
+APP_PLATFORM := android-8
